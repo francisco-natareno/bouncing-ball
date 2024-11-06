@@ -1,0 +1,27 @@
+.bouncing-ball {
+  width: 50px; /* establece el ancho */
+  height: 50px; /* establece el alto */
+  background-color: #3498db; /* define un color de fondo */
+  border-radius: 50%; /* elemento circular (creara un circulo) */
+  animation-name: bouncing; /* asocia la animacion definida mas abajo con este elemento */
+  animation-duration: 2s; /* duracion de la animacion */
+  animation-timing-function: ease-in-out; /* cambia la velocidad de la animacion al principio y al final */
+  animation-iteration-count: infinite; /* la animacion se repetira infinitamente */
+  margin: 100px auto; /* aplica un margen de 100px arriba y abajo, centra el elemento horizontalmente */
+}
+
+hr {
+  margin: -100px; /* aplica un margen negativo de -100px */
+}
+
+@keyframes bouncing {
+  0%, 100% {
+    transform: translateY(0); /* en el inicio y el final de la animacion, el elemento no se desplaza verticalmente */
+    animation-timing-function: ease-in; /* la velocidad es mas lenta al comienzo */
+  }
+  50% {
+    transform: translateY(-100px); /* en el punto medio de la animacion el elemento se desplaza hacia arriba 100px */
+    animation-timing-function: ease-out; /* la velocidad es mas rapida al final */
+  }
+  
+}
